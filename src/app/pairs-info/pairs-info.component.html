@@ -1,8 +1,10 @@
 <div class="container-fluid d-flex flex-column justify-content-center">
     <div class="header mb-3">
         <h1 class="pair">
-            <img class="logo" alt="{{token1?.logo}}" src="../../assets/logo/{{token1?.logo}}">
-            <img class="logo" alt="{{token2?.logo}}" src="../../assets/logo/{{token2?.logo}}">
+            <img class="logo" alt="{{token1?.logo}}"
+                src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token1?.logo}}">
+            <img class="logo" alt="{{token2?.logo}}"
+                src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token2?.logo}}">
             {{contract?.id | uppercase}}
         </h1>
         <h2 class="price">Liquidity =
@@ -22,12 +24,14 @@
             <div class="liquidity d-flex justify-content-center">
                 <div>
                     <p>{{(lpTokens / totalSupplyLPToken)*token1Balance | number : '1.1-3'}} <img class="logo"
-                            alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
+                            alt="{{token1?.symbol}}"
+                            src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token1?.logo}}">
                     </p>
                 </div>
                 <div>
                     <p>{{(lpTokens / totalSupplyLPToken)*token2Balance | number : '1.1-3'}} <img class="logo"
-                            alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+                            alt="{{token2?.symbol}}"
+                            src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token2?.logo}}">
                     </p>
                 </div>
             </div>
@@ -45,7 +49,8 @@
 
     <div class="row justify-content-center">
         <nb-card class="col-lg" status="basic">
-            <nb-card-header><img class="logo" alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
+            <nb-card-header><img class="logo" alt="{{token1?.symbol}}"
+                    src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token1?.logo}}">
                 <p class="m-0">1 {{token1?.symbol | uppercase}}</p>
             </nb-card-header>
             <nb-card-body>
@@ -56,7 +61,8 @@
             </nb-card-body>
         </nb-card>
         <nb-card class="col-lg" status="basic">
-            <nb-card-header><img class="logo" alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+            <nb-card-header><img class="logo" alt="{{token2?.symbol}}"
+                    src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token2?.logo}}">
                 <p class="m-0">1 {{token2?.symbol | uppercase}}</p>
             </nb-card-header>
             <nb-card-body>
@@ -68,8 +74,10 @@
         </nb-card>
         <nb-card class="col-lg" status="basic">
             <nb-card-header>
-                <img class="logo" alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
-                <img class="logo" alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+                <img class="logo" alt="{{token1?.symbol}}"
+                    src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token1?.logo}}">
+                <img class="logo" alt="{{token2?.symbol}}"
+                    src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token2?.logo}}">
                 <p class="m-0">1 LP</p>
             </nb-card-header>
             <nb-card-body>
@@ -96,7 +104,8 @@
         </nb-card>
         <nb-card class="col-lg" status="basic">
             <nb-card-header>
-                <img class="logo" alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
+                <img class="logo" alt="{{token1?.symbol}}"
+                    src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token1?.logo}}">
             </nb-card-header>
             <nb-card-body>
                 <p class="m-0">{{token1Balance | number : '1.0-0'}} {{token1?.symbol|uppercase}}</p>
@@ -104,7 +113,8 @@
         </nb-card>
         <nb-card class="col-lg" status="basic">
             <nb-card-header>
-                <img class="logo" alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+                <img class="logo" alt="{{token2?.symbol}}"
+                    src="https://liorcorp.github.io/LP-SWAP/assets/logo/{{token2?.logo}}">
             </nb-card-header>
             <nb-card-body>
                 <p class="m-0">{{token2Balance | number : '1.0-0'}} {{token2?.symbol | uppercase}}</p>
