@@ -1,0 +1,25 @@
+.home,
+.pairs {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(154, 106, 255);
+  margin-bottom: 0.5rem;
+  nb-icon {
+    margin-right: 1rem;
+  }
+  p {
+    color: rgb(154, 106, 255);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+.logo {
+  position: absolute;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgb(154, 106, 255);
+}

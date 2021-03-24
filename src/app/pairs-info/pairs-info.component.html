@@ -1,0 +1,115 @@
+<div class="container-fluid d-flex flex-column justify-content-center">
+    <div class="header mb-3">
+        <h1 class="pair">
+            <img class="logo" alt="{{token1?.logo}}" src="../../assets/logo/{{token1?.logo}}">
+            <img class="logo" alt="{{token2?.logo}}" src="../../assets/logo/{{token2?.logo}}">
+            {{contract?.id | uppercase}}
+        </h1>
+        <h2 class="price">Liquidity =
+            {{((token2Balance*token2Price) + (token1Balance*token1Price)) | currency : 'USD' : 'symbol' :
+            '1.0-0'}}</h2>
+    </div>
+
+    <nb-card class="p-2 mb-3">
+        <nb-card-header>
+            <p class="my-0 text-center"> Estimation LP Token</p>
+        </nb-card-header>
+        <nb-card-body>
+            <input [ngModel]="lpTokens" (ngModelChange)="lpTokens=$event" type="text" name="lptoken" nbInput fullWidth
+                status="info" placeholder="LP TOKENS">
+        </nb-card-body>
+        <nb-card-footer>
+            <div class="liquidity d-flex justify-content-center">
+                <div>
+                    <p>{{(lpTokens / totalSupplyLPToken)*token1Balance | number : '1.1-3'}} <img class="logo"
+                            alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
+                    </p>
+                </div>
+                <div>
+                    <p>{{(lpTokens / totalSupplyLPToken)*token2Balance | number : '1.1-3'}} <img class="logo"
+                            alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p class="text-center m-0">{{(((token1Balance*token1Price) + (token2Balance*token2Price)) /
+                    totalSupplyLPToken)
+                    *
+                    lpTokens
+                    | currency : 'USD'
+                    : 'symbol' :
+                    '1.0-0'}}</p>
+            </div>
+        </nb-card-footer>
+    </nb-card>
+
+    <div class="row justify-content-center">
+        <nb-card class="col-lg" status="basic">
+            <nb-card-header><img class="logo" alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
+                <p class="m-0">1 {{token1?.symbol | uppercase}}</p>
+            </nb-card-header>
+            <nb-card-body>
+                <p class="m-0">{{token2Balance / token1Balance | number : '1.1-2'}} {{token2?.symbol | uppercase}}
+                    <span class="price">({{token1Price |
+                        currency}})</span>
+                </p>
+            </nb-card-body>
+        </nb-card>
+        <nb-card class="col-lg" status="basic">
+            <nb-card-header><img class="logo" alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+                <p class="m-0">1 {{token2?.symbol | uppercase}}</p>
+            </nb-card-header>
+            <nb-card-body>
+                <p class="m-0">{{token1Balance / token2Balance | number : '1.1-2'}} {{token1?.symbol | uppercase}}
+                    <span class="price">({{token2Price |
+                        currency}})</span>
+                </p>
+            </nb-card-body>
+        </nb-card>
+        <nb-card class="col-lg" status="basic">
+            <nb-card-header>
+                <img class="logo" alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
+                <img class="logo" alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+                <p class="m-0">1 LP</p>
+            </nb-card-header>
+            <nb-card-body>
+                <p class="price m-0">{{((token2Balance*token2Price) + (token1Balance*token1Price)) / totalSupplyLPToken
+                    |
+                    currency :
+                    'USD'
+                    : 'symbol' :
+                    '1.0-0'}}</p>
+            </nb-card-body>
+        </nb-card>
+    </div>
+
+
+
+    <div class="row justify-content-center">
+        <nb-card class="col-lg" status="basic">
+            <nb-card-header>
+                <p class="m-0">Total Supply LP</p>
+            </nb-card-header>
+            <nb-card-body>
+                <p class="m-0">{{totalSupplyLPToken | number : '1.1-2'}} LP</p>
+            </nb-card-body>
+        </nb-card>
+        <nb-card class="col-lg" status="basic">
+            <nb-card-header>
+                <img class="logo" alt="{{token1?.symbol}}" src="../../assets/logo/{{token1?.logo}}">
+            </nb-card-header>
+            <nb-card-body>
+                <p class="m-0">{{token1Balance | number : '1.0-0'}} {{token1?.symbol|uppercase}}</p>
+            </nb-card-body>
+        </nb-card>
+        <nb-card class="col-lg" status="basic">
+            <nb-card-header>
+                <img class="logo" alt="{{token2?.symbol}}" src="../../assets/logo/{{token2?.logo}}">
+            </nb-card-header>
+            <nb-card-body>
+                <p class="m-0">{{token2Balance | number : '1.0-0'}} {{token2?.symbol | uppercase}}</p>
+            </nb-card-body>
+        </nb-card>
+
+    </div>
+</div>

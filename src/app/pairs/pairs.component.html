@@ -1,0 +1,10 @@
+<nb-card size="big">
+    <nb-card-header>
+        <h1>Top Pairs</h1>
+    </nb-card-header>
+    <nb-list>
+        <nb-list-item *ngFor="let contract of contracts | async">
+            <a routerLink="/pairs/{{contract.id}}">{{contract.id | uppercase}}</a>
+        </nb-list-item>
+    </nb-list>
+</nb-card>
