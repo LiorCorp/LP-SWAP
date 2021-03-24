@@ -17,19 +17,19 @@ export class TokenService {
 
   getTokensData(): Observable<Token[]> {
     return this.httpClient
-      .get('/src/assets/data/token.json')
+      .get('https://liorcorp.github.io/LP-SWAP/assets/data/token.json')
       .pipe(map((res: any) => res.tokens));
   }
 
   getContractsData(): Observable<Contract[]> {
     return this.httpClient
-      .get('/src/assets/data/token.json')
+      .get('https://liorcorp.github.io/LP-SWAP/assets/data/token.json')
       .pipe(map((res: any) => res.contracts));
   }
 
   getTokenData(tokenId: string): Observable<Token> {
     return this.httpClient
-      .get('/src/assets/data/token.json')
+      .get('https://liorcorp.github.io/LP-SWAP/assets/data/token.json')
       .pipe(
         map((res: any) =>
           res.tokens.find((token: Token) => (token.id = tokenId))
@@ -39,7 +39,7 @@ export class TokenService {
 
   getContractData(id: string): Observable<Contract> {
     return this.httpClient
-      .get('/src/assets/data/token.json')
+      .get('https://liorcorp.github.io/LP-SWAP/assets/data/token.json')
       .pipe(
         map((res: any) =>
           res.contracts.find((contract: Contract) => (contract.id = id))
